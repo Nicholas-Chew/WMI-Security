@@ -9,10 +9,10 @@
 
 ## Database
 - [x] ACM Digital Library 
-- [ ] CiteSeer.IST (NEC & Penn State)
-- [ ] Computer Review
-- [ ] Computer Source
-- [ ] Computing Reviews
+- [x] CiteSeer.IST (NEC & Penn State)
+- [x] Computer Review
+- [x] Computer Source
+- [x] Computing Reviews
 - [ ] CRCnetBASE Titles
 - [ ] Engineering Village
 - [ ] Eurographics Digital Library

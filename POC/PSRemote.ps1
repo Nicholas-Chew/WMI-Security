@@ -9,5 +9,3 @@ Set-Item WSMan:\localhost\Client\TrustedHosts -Value '%ipaddress%'
 
 #Connect to Remote PS
 Enter-PSSession -ComputerName %ipaddress% -Credential %login-user%
-
-%
