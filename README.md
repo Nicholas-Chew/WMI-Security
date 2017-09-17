@@ -1,2 +1,2 @@
 ## Final Year Project
-### Windows Mangement Instrument Security
+### Windows Management Instrument Security

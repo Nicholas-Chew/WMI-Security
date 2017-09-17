@@ -1,23 +1,23 @@
 ## Articles Online
 ### Generic
-* https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
-* https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
-* https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf
-* https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx
+- [ ] https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
+- [ ] https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
+- [ ] https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf
+- [x] https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx
 
 ### WMI Abusing
-* https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/
-* https://www.codeproject.com/Articles/28226/Creating-WMI-Permanent-Event-Subscriptions-Using-M
+- [ ] https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/
+- [ ] https://www.codeproject.com/Articles/28226/Creating-WMI-Permanent-Event-Subscriptions-Using-M
+- [x] http://www.securitynewspaper.com/2015/10/10/abusing-windows-management-instrumentation-wmi-to-build-a-persistent-asynchronous-and-fileless-backdoor/
+- [x] https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor.pdf
+- [ ] https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html
 
 ### WQL
-* https://www.codeproject.com/Articles/46390/WMI-Query-Language-by-Example
-* https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/10/three-easy-ways-to-use-powershell-and-wql-to-get-wmi-data/
+- [ ] https://www.codeproject.com/Articles/46390/WMI-Query-Language-by-Example
+- [ ] https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/10/three-easy-ways-to-use-powershell-and-wql-to-get-wmi-data/
 
 
-## Done
-* http://www.securitynewspaper.com/2015/10/10/abusing-windows-management-instrumentation-wmi-to-build-a-persistent-asynchronous-and-fileless-backdoor/
-* https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor.pdf
 
 ## Skills Needed
-* Power Shell
-* VB Script
+- [x] Power Shell
+- [x] VB Script
