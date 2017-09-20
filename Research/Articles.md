@@ -16,7 +16,12 @@
 - [ ] https://www.codeproject.com/Articles/46390/WMI-Query-Language-by-Example
 - [ ] https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/10/three-easy-ways-to-use-powershell-and-wql-to-get-wmi-data/
 
+### Blog
+- [ ] http://www.exploit-monday.com/?m=1
+- [ ] http://www.exploit-monday.com/2017/07/bypassing-device-guard-with-dotnet-methods.html?m=1
 
+### GitHub
+- [ ] https://github.com/mattifestation
 
 ## Skills Needed
 - [x] Power Shell
