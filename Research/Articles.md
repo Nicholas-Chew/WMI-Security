@@ -3,6 +3,7 @@
 - [ ] https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
 - [ ] https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
 - [ ] https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf
+- [ ] https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html
 - [x] https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx
 
 ### WMI Abusing
