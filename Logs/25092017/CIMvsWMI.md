@@ -11,3 +11,7 @@ The CIM cmdlets were overshadowed by PowerShell workflows, but they are (to my m
 
 The other major CIM-related advance was the introduction of CDXML, which enables a CIM class to be wrapped in some simple XML and published as a PowerShell module. 
 This is how over 60% of the cmdlets in Windows 8 and later are produced.
+
+The big difference between the WMI cmdlets and the CIM cmdlets is that the CIM cmdlets use WSMAN (WinRM) to connect to remote machines.
+
+**Only Studied the difference between CIM and WMI. Didn't look into differences in cmdlet**

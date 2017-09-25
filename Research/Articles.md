@@ -39,7 +39,7 @@
 
 ### GitHub
 - [ ] https://github.com/mattifestation
-- [ ] [WMI Implant] (https://github.com/ChrisTruncer/WMImplant)
+- [ ] [WMI Implant](https://github.com/ChrisTruncer/WMImplant)
 
 ## WMIC
 - [ ] [Windows wmic command line command - Computer Hope](https://www.computerhope.com/wmic.htm)
