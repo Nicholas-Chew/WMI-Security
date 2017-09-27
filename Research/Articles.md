@@ -17,7 +17,7 @@
 | [Use PowerShell to Copy Files over WMI - Trevor Sullivan's Tech Room](https://trevorsullivan.net/2016/10/20/use-powershell-copy-files-wmi/) | Not Done | |
 | [Use PowerShell to Create a Permanent WMI Event to Launch a VBScript - Microsoft](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/20/use-powershell-to-create-a-permanent-wmi-event-to-launch-a-vbscript/) | Not Done | |
 | [WINDOWS MANAGEMENT INSTRUMENTATION (WMI) OFFENSE, DEFENSE, AND FORENSICS - FireEye](https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf) | Not Done | |
-| [**Windows Management Instrumentation - Microsoft (Progress: Using WMI)**](https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx) | **In Progress** | |
+| [*Windows Management Instrumentation - Microsoft*](https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx) | *Done* | |
 | [WMI vs. WMI: Monitoring for Malicious Activity - FireEye](https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html) | Not Done | |
 
 
@@ -59,7 +59,7 @@
 ## CIM
 | URL | Status | Note |
 | :-- | :----- | :--- |
-| [**CIM vs WMI - Microsoft**](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | **Done** | [Note](../Logs/25092017/CIMvsWMI.md) |
+| [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | *Done* | [*Note*](../Logs/25092017/CIMvsWMI.md) |
 | [Getting started with CDXML - Microsoft](https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx) | Not Done | |
 
 
