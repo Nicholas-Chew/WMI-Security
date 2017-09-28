@@ -28,7 +28,7 @@
 | [*Abusing Windows Management Instrumentation (WMI) to Build a Persistent, Asynchronous, and Fileless Backdoor - Infomation Security Newspaper*](http://www.securitynewspaper.com/2015/10/10/abusing-windows-management-instrumentation-wmi-to-build-a-persistent-asynchronous-and-fileless-backdoor/) | *Done* | |
 | [Creating WMI Permanent Event Subscription Using MOF - CodeProject](https://www.codeproject.com/Articles/28226/Creating-WMI-Permanent-Event-Subscriptions-Using-M) | Not Done | |
 | [Dissecting APT29 - FireEye](https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html) | Not Done | |
-| [Explained: WMI hijackers - MalwareBytes](https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/) | Not Done | |
+| [*Explained: WMI hijackers - MalwareBytes*](https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/) | *Done* | |
 | [WMI Attacks - hackinsight](http://www.hackinsight.org/news,469.html) | Not Done | |
 
 ### WQL
