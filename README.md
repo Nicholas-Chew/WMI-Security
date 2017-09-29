@@ -1,9 +1,7 @@
 ## Final Year Project
 ### Windows Management Instrument Security
 
-## TODO
-- [ ] Add article in Research into endNote
-- [ ] Update all endNote article attachments
+## Next TODO
 - [ ] Study on APT 29 thoroughly 
 
 ## Work Flow
