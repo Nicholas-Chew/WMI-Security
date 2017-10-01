@@ -10,7 +10,7 @@
 ### Generic
 | URL | Status | Note |
 | :-- | :----- | :--- |
-| [WMI Consumer and Event - Microsoft](https://msdn.microsoft.com/en-us/library/aa389751(v=vs.85).aspx) | Not Done | |
+| [*WMI Consumer and Event - Microsoft*](https://msdn.microsoft.com/en-us/library/aa389751(v=vs.85).aspx) | *Done* | [*Note*](../Logs/20171001/Create WMI Events Binding.md) |
 | [New ransomware, old techniques: Petya adds worm capabilities - Microsoft](https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/) | Not Done | |
 | [PowerShell and Events: Permanent WMI Event Subscriptions - Learn PowerShell](https://learn-powershell.net/2013/08/14/powershell-and-events-permanent-wmi-event-subscriptions/) | Not Done | |
 | [THERE’S SOMETHING ABOUT WMI - Mandiant](https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf) | Not Done | |
