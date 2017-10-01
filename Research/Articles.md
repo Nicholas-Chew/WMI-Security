@@ -10,7 +10,7 @@
 ### Generic
 | URL | Status | Note |
 | :-- | :----- | :--- |
-| [*WMI Consumer and Event - Microsoft*](https://msdn.microsoft.com/en-us/library/aa389751(v=vs.85).aspx) | *Done* | [*Note*](../Logs/20171001/Create WMI Events Binding.md) |
+| [*WMI Consumer and Event - Microsoft*](https://msdn.microsoft.com/en-us/library/aa389751(v=vs.85).aspx) | *Done* | [*Note*](../Logs/20171001/Create_WMI_Events_Binding.md) |
 | [New ransomware, old techniques: Petya adds worm capabilities - Microsoft](https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/) | Not Done | |
 | [PowerShell and Events: Permanent WMI Event Subscriptions - Learn PowerShell](https://learn-powershell.net/2013/08/14/powershell-and-events-permanent-wmi-event-subscriptions/) | Not Done | |
 | [THERE’S SOMETHING ABOUT WMI - Mandiant](https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf) | Not Done | |
@@ -59,7 +59,7 @@
 ## CIM
 | URL | Status | Note |
 | :-- | :----- | :--- |
-| [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | *Done* | [*Note*](../Logs/25092017/CIM vs WMI.md) |
+| [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | *Done* | [*Note*](../Logs/25092017/CIM_vs_WMI.md) |
 | [Getting started with CDXML - Microsoft](https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx) | Not Done | |
 
 
