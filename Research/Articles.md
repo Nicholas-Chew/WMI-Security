@@ -59,7 +59,7 @@
 ## CIM
 | URL | Status | Note |
 | :-- | :----- | :--- |
-| [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | *Done* | [*Note*](../Logs/25092017/CIMvsWMI.md) |
+| [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell/) | *Done* | [*Note*](../Logs/25092017/CIM vs WMI.md) |
 | [Getting started with CDXML - Microsoft](https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx) | Not Done | |
 
 

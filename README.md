@@ -3,6 +3,7 @@
 
 ## Next TODO
 - [ ] Study on APT 29 thoroughly 
+- [ ] Create a WMI Event PowerShell Module
 
 ## Work Flow
 1. Fork and clone the repo.

@@ -1,4 +1,4 @@
-## CIM vs WMI - Microsoft
+# CIM vs WMI - Microsoft
 Get-WmiObject is one of the original PowerShell cmdlets. 
 It was enhanced in PowerShell 2.0 when the other WMI cmdlets were introduced. 
 In PowerShell 1.0, Get-WmiObject was the only cmdlet with the option to access another system. 
