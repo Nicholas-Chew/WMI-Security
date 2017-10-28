@@ -55,9 +55,9 @@ Working with WMI Events means that you need to know what kind of classes are ava
 
 Working down the line of classes, the ProcessTrace classes are used to report when a process has started or stopped.
 
-The __Instance* classes are intrinsic event classes which reports a change to the WMI repository, such as a creation or modification. An example of this would be to use one of the __Instance* classes with Win32_Service to track when a service starts or stops. More on this with examples later.
+The ```__Instance*``` classes are **intrinsic event** classes which reports a change to the WMI repository, such as a creation or modification. An example of this would be to use one of the ```__Instance*``` classes with ```Win32_Service``` to track when a service starts or stops. More on this with examples later.
 
-Lastly on this list, the Registry* classes are extrinsic events which cannot be linked directly to the WMI model. Regardless, you can use this to receive a notification if a part of the registry that has already been defined has been modified of deleted.
+Lastly on this list, the ```Registry*``` classes are **extrinsic events** which cannot be linked directly to the WMI model. Regardless, you can use this to receive a notification if a part of the registry that has already been defined has been modified of deleted.
 
 ### WMI Event Query Structure
 ##### Basic Example
