@@ -63,7 +63,7 @@
 | [*CIM vs WMI - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell) | *Done* | [*Note*](Notes/25092017/CIM_vs_WMI.md) |
 | [Getting started with CDXML - Microsoft](https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx) | Not Done | |
 | [*Introduction to CIM Cmdlets - Microsoft*](https://blogs.msdn.microsoft.com/powershell/2012/08/24/introduction-to-cim-cmdlets/#comments) | *Done* | [*Note*](Notes/25092017/CIM_vs_WMI.md) |
-| [*CIM vs. WMI CmdLets – The top reasons I changed over* - Maikkoster](http://maikkoster.com/cim-vs-wmi-cmdlets-the-top-reasons-i-changed) | *Done* | [*Note*](Notes/25092017/Why_Switch_To_CIM .md)  |
+| [*CIM vs. WMI CmdLets – The top reasons I changed over* - Maikkoster](http://maikkoster.com/cim-vs-wmi-cmdlets-the-top-reasons-i-changed) | *Done* | [*Note*](Notes/25092017/Why_Switch_To_CIM.md)  |
 | [*Should I use CIM or WMI with Windows PowerShell?*](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell) | *Done* | [*Note*](Notes/25092017/CIM_vs_WMI.md) |
 
 
