@@ -1,6 +1,6 @@
 # Permanent WMI Event Subscriptions
 ## Finding the WMI Instances
-We can use Get-WMIObject with the –Class parameter consisting of root\Subscription and then specifying the appropriate class that we wish to view.
+We can use ```Get-WMIObject``` with the ```–Class``` parameter consisting of ```root\Subscription``` and then specifying the appropriate class that we wish to view.
 ```
 #List Event Filters
 Get-WMIObject -Namespace root\Subscription -Class __EventFilter
@@ -19,7 +19,7 @@ Get-WMIObject -Namespace root\Subscription -Class __FilterToConsumerBinding
 ## Event & Consumer Creation
 ### Option #1: Using [wmiclass]
 #### Event Filter
-The first method of creating the WMI event subscription is by taking advantage of the wmiclass type accelerator and using the CreateInstance() method. First I will start off by creating the instance of the Filter.
+The first method of creating the WMI event subscription is by taking advantage of the wmiclass type accelerator and using the ```CreateInstance()``` method. First I will start off by creating the instance of the Filter.
 ```
 #Creating a new event filter
 $instanceFilter = ([wmiclass]"\\.\root\subscription:__EventFilter").CreateInstance()
@@ -31,11 +31,11 @@ $instanceFilter.Query = "select * from __instanceModificationEvent within 5 wher
 $instanceFilter.Name = "ServiceFilter"
 $instanceFilter.EventNamespace = 'root\cimv2'
 ```
-You cannot see the full member by using Get-Member, have to use -View All to see. Put method is the method to actually save this instance into the WMI repository.
+You cannot see the full member by using ```Get-Member```, have to use ```-View All``` to see. ```Put``` method is the method to actually save this instance into the WMI repository.
 ```
 $instancefilter | Get-Member -View All
 ```
-Put method to save this instance. It will output an object that I will need to hold onto so I can use it’s Path property later on for the Binding.
+```Put``` method to save this instance. It will output an object that I will need to hold onto so I can use it’s Path property later on for the Binding.
 ```
 $result = $instanceFilter.Put()
 $newFilter = $result.Path
@@ -75,10 +75,10 @@ $newBinding = $result.Path
 ([wmi]$newConsumer).Delete()
 ([wmi]$newBinding).Delete()
 ```
-By giving the path of the instance, the [wmi] type accelerator will cast it out to the proper type. This also means that you have access to the Delete() method and can easily remove all of the subscription instances without any issues.
+By giving the path of the instance, the [wmi] type accelerator will cast it out to the proper type. This also means that you have access to the ```Delete()``` method and can easily remove all of the subscription instances without any issues.
 
 ### Option #2: Using Set-WMIInstance
-This method makes use of the –Arguments parameter which accepts a hashtable that will be used to define each instance and its properties. This method also lends itself very nicely to “splatting”.
+This method makes use of the ```–Arguments``` parameter which accepts a hashtable that will be used to define each instance and its properties. This method also lends itself very nicely to “splatting”.
 
 First, create the hash table that will be used with my splatting and these are also the common parameters which will not be changed with each WMI instance.
 ```
@@ -124,7 +124,7 @@ $wmiParams.Arguments = @{
 $bindingResult = Set-WmiInstance @wmiParams
 ```
 #### Removing WMI Subscriptions
-Using Get-WMIObject to locate the instance and piping into Remove-WMIObject, you can easily remove one or all of the created WMI instances.  Depending on your objective, you can either Filter for each instance using –Filter or just go crazy and remove everything!
+Using ```Get-WMIObject``` to locate the instance and piping into ```Remove-WMIObject```, you can easily remove one or all of the created WMI instances.  Depending on your objective, you can either Filter for each instance using ```–Filter``` or just go crazy and remove everything!
 ```
 ##Removing WMI Subscriptions using Remove-WMIObject
 #Filter
