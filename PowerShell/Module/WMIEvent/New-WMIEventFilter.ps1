@@ -35,6 +35,7 @@
 
          [Parameter(
             Mandatory = $false,
+            ValueFromPipeline=$True,
             HelpMessage = "Computer Name/IP Address for this event filter."
             )]
         [string[]]
@@ -52,8 +53,7 @@
             Mandatory = $false,
             HelpMessage = "CimSessionDcom for this event filter."
             )]
-        [Management.Automation.PSCredential]
-        [Management.Automation.CredentialAttribute()]
+        [Microsoft.Management.Infrastructure.CimSession[]]
         $CimSession
 
         #End of Common Parameter      
@@ -61,30 +61,58 @@
 
     begin
     {
+    	$CmdletName = $Pscmdlet.MyInvocation.MyCommand.Name
+
         #If CimSession is passed us CimSession
-        if((!$CimSession) -and ($ComputerName))
+        if((!$PSBoundParameters.ContainsKey('CimSession')) -and ($PSBoundParameters.ContainsKey('$ComputerName')))
         {
+            $SessionParams = @{}
+
             #Else use Computer Name and Credential
+            $SessionParams.ComputerName = $ComputerName
+
             if($Credential)
             {
-                $CimSession = New-CimSessionDcom -ComputerName $ComputerName -Credential $Credential
+                $SessionParams.Credential = $Credential
             }
             else
             {
-                $CimSession = New-CimSessionDcom -ComputerName $ComputerName
+                $SessionParams.Credential = Get-Credential
             }
-        }
 
-        #Check if Event filter with the same name already exists
-        if ($Name)
-		{
-			${ExistingFilter} = Get-CimInstance -Namespace ${Namespace} -ComputerName ${ComputerName} -Class __EventFilter -Filter "Name = '${Name}'"
-			if (${ExistingFilter})
-			{
-				Write-Warning -Message "${CmdletName}: __EventFilter instance already exists with name ${Name}"
-				#Write-Output -InputObject ${ExistingFilter}
-			}
-}
+            #Test is Remote PowerShell is Enabled
+            $WSMan = Test-WSMan -ComputerName $ComputerName -ErrorAction SilentlyContinue
+ 
+            if (($WSMan -ne $null) -and ($WSMan.ProductVersion -match 'Stack: ([3-9]|[1-9][0-9]+)\.[0-9]+')) 
+            {
+                $CimSession = New-CimSession @SessionParams
+            } 
+ 
+            if ($Session -eq $null) 
+            {
+                $SessionParams.SessionOption = (New-CimSessionOption -Protocol Dcom)
+                $CimSession = New-CimSession @SessionParams
+            }
+
+            rv $SessionParams
+            rv $WSMan
+        }
     }
 
+    process
+    {
+        
+    }
+
+    end
+    {
+        Receive-Job -Job $Jobs -Wait
+        $Jobs | Remove-Job
+
+        if($PSBoundParameters.ContainsKey('ComputerName'))
+        {
+            # Clean up the CimSessions we created to support the ComputerName parameter
+            $CimSession | Remove-CimSession
+        }
+    }
 }
