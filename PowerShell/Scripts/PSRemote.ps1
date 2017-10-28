@@ -1,7 +1,7 @@
+#On Client side
 #Get Host Name
 nbtstat -A %ipaddress%	 
 
-#On Client side
 #Make srure WinRM is runnig
 WinRM quickconfig
 #Add remote server to trusted Host 
