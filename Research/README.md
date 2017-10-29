@@ -4,7 +4,7 @@
 | :--------| :-------------- |
 | Nothing  | Not Done        |
 | **BOLD** | **In Progress** |
-| *Italic* | *Done*		       |
+| *Italic* | *Done*		     |
 
 ## WMI
 ### Generic
@@ -12,15 +12,11 @@
 | :-- | :----- | :--- |
 | [*WMI Consumer and Event - Microsoft*](https://msdn.microsoft.com/en-us/library/aa389751(v=vs.85).aspx) | *Done* | [*Note*](Notes/Create_WMI_Events_Binding.md) |
 | [New ransomware, old techniques: Petya adds worm capabilities - Microsoft](https://blogs.technet.microsoft.com/mmpc/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/) | Not Done | |
-| [*PowerShell and Events: Permanent WMI Event Subscriptions - Learn PowerShell*](https://learn-powershell.net/2013/08/14/powershell-and-events-permanent-wmi-event-subscriptions/) | *Done* | [*Note*](Notes/Ways_To_Create_WMI_Event.md) |
-| [**PowerShell and Events: Temporary Event Subscriptions - Learn PowerShell**](https://learn-powershell.net/2013/08/02/powershell-and-events-wmi-temporary-event-subscriptions/) | **Partially, up till creation portion** | [*Note*](Notes/WMI_Event.md) |
 | [THERE’S SOMETHING ABOUT WMI - Mandiant](https://www.sans.org/summit-archives/file/summit-archive-1492187258.pdf) | Not Done | |
-| [**Use PowerShell to Copy Files over WMI - Trevor Sullivan's Tech Room**](https://trevorsullivan.net/2016/10/20/use-powershell-copy-files-wmi/**) | **Done** | [Copy-FileByCim](../PowerShell/Module/Copy-FileByCim.ps1) |
-| [**Use PowerShell to Create a Permanent WMI Event to Launch a VBScript - Microsoft**](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/20/use-powershell-to-create-a-permanent-wmi-event-to-launch-a-vbscript/) | **Done** | [*Note*](Notes/WMI_Event.md) |
+| [*Use PowerShell to Copy Files over WMI - Trevor Sullivan's Tech Room*](https://trevorsullivan.net/2016/10/20/use-powershell-copy-files-wmi/) | *Done* | [Copy-FileByCim](../PowerShell/Module/Copy-FileByCim.ps1) |
 | [WINDOWS MANAGEMENT INSTRUMENTATION (WMI) OFFENSE, DEFENSE, AND FORENSICS - FireEye](https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf) | Not Done | |
 | [*Windows Management Instrumentation - Microsoft*](https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx) | *Done* | |
 | [WMI vs. WMI: Monitoring for Malicious Activity - FireEye](https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html) | Not Done | |
-
 
 ### WMI Abusing
 | URL | Status | Note |
@@ -31,6 +27,14 @@
 | [Dissecting APT29 - FireEye](https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html) | Not Done | |
 | [*Explained: WMI hijackers - MalwareBytes*](https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/) | *Done* | |
 | [WMI Attacks - hackinsight](http://www.hackinsight.org/news,469.html) | Not Done | |
+
+### WMI Eent Subscription
+| URL | Status | Note |
+| :-- | :----- | :--- |
+| [*PowerShell and Events: Permanent WMI Event Subscriptions - Learn PowerShell*](https://learn-powershell.net/2013/08/14/powershell-and-events-permanent-wmi-event-subscriptions/) | *Done* | [*Note*](Notes/Ways_To_Create_WMI_Event.md) |
+| [**PowerShell and Events: Temporary Event Subscriptions - Learn PowerShell**](https://learn-powershell.net/2013/08/02/powershell-and-events-wmi-temporary-event-subscriptions/) | **Partially, up till creation portion** | [*Note*](Notes/WMI_Event.md) |
+| [*Use PowerShell to Create a Permanent WMI Event to Launch a VBScript - Microsoft*](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/20/use-powershell-to-create-a-permanent-wmi-event-to-launch-a-vbscript/) | *Done* | [*Note*](Notes/WMI_Event.md) |
+| [*WMI Filtering with Cim CmdLets*](https://social.technet.microsoft.com/Forums/scriptcenter/en-US/35a482d6-daf4-422a-80d2-828be85efd99/trouble-with-wmi-filtering-with-powershell-and-cim-cmdlets?forum=ITCG) | *Done*  |  |
 
 ### WQL
 | URL | Status | Note |
