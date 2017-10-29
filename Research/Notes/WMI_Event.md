@@ -65,17 +65,19 @@ When creating a WMI event query, make sure that the *within* value is not less t
 
 ## WMI Consumer 
 ### Event Consumer Type
-* Script 
+* [Script](https://msdn.microsoft.com/en-us/library/aa384749(v=vs.85).aspx) 
 	* Allows you to run VBScript code in response to an event
 	* Embed VBscript code in the consumer or reference a script file
-* Command Line
+* [Command Line](https://msdn.microsoft.com/en-us/library/aa389231(v=vs.85).aspx)
 	* Run abitary comands in response to events
 	* Pass event details as parameters to the command 
-* SMTP
+* [SMTP](https://msdn.microsoft.com/en-us/library/aa393629(v=vs.85).aspx)
 	* Send an e-mail in response to an event (requites an open SMTP server)
 	* Cannot use SMTP credentials with this consumer
-* NT Event Log
+* [NT Event Log](https://msdn.microsoft.com/en-us/library/aa392715(v=vs.85).aspx)
 	* Log an event to the application event log in response to an event
 	* Use WMI standtad string templates to pass event infomation to log entry
+*[Log File Event](https://msdn.microsoft.com/en-us/library/aa392277(v=vs.85).aspx)
+	* Writes customized strings to a text log file
 
 

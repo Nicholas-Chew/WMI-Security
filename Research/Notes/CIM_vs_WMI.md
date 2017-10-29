@@ -1,4 +1,4 @@
-# CIM vs WMI - Microsoft
+# CIM vs WMI
 ## Content
 1. CIM vs WMI
 2. Why is CIM Cmdlets created
@@ -10,8 +10,8 @@
 | :-- | :----- |
 | CIM | Common Information Model (CIM) is the DMTF standard [DSP0004] for describing the structure and behavior of managed resources such as storage, network, or software components. |
 | WMI | Windows Management Instrumentation (WMI) is a CIM server that implements the CIM standard on Windows. |
-| [WS-Man] (https://en.wikipedia.org/wiki/WS-Management) | WS-Management (WS-Man) protocol is a SOAP-based, firewall-friendly protocol for management clients to communicate with CIM servers. |
-| [WinRM] (https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426%28v=vs.85%29.aspx) | Windows Remote Management (WinRM) is the Microsoft implementation of the WS-Man protocol on Windows. |
+| [WS-Man](https://en.wikipedia.org/wiki/WS-Management) | WS-Management (WS-Man) protocol is a SOAP-based, firewall-friendly protocol for management clients to communicate with CIM servers. |
+| [WinRM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426%28v=vs.85%29.aspx) | Windows Remote Management (WinRM) is the Microsoft implementation of the WS-Man protocol on Windows. |
 
 
 ## CIM vs WMI
