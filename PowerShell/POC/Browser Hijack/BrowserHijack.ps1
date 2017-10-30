@@ -2,6 +2,10 @@ $Secpasswd = ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force
 $Creds = New-Object System.Management.Automation.PSCredential ("wmiserver\administrator", $secpasswd)
 $CimSession = New-CimSession -ComputerName 10.0.75.2 -Credential $Creds
 
+#$sOpt = New-CimSessionOption ¨CProtocol DCOM
+#$CimSession = New-CimSession ¨CComputerName 10.0.75.2 ¨CSessionOption $sOpt  -Credential $Creds
+
+
 $query = @"
  Select * from __InstanceCreationEvent within 30
 
