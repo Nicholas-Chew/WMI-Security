@@ -57,7 +57,9 @@
 | [**Introduction to CIM Cmdlets - Microsoft**](https://blogs.msdn.microsoft.com/powershell/2012/08/24/introduction-to-cim-cmdlets/#comments) | [**CIM vs WMI**](Notes/CIM_vs_WMI.md) |
 | [**CIM vs. WMI CmdLets – The top reasons I changed over** - Maikkoster](http://maikkoster.com/cim-vs-wmi-cmdlets-the-top-reasons-i-changed) | [**Why Switch To CIM**](Notes/Why_Switch_To_CIM.md)  |
 | [**Should I use CIM or WMI with Windows PowerShell?**](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell) | [**CIM vs WMI**](Notes/CIM_vs_WMI.md) |
-
+| | |
+| **PowerShell** |  |
+| [PowerShell streams: Write-Host, Write-Output, Write-Verbose, Write-Error](https://4sysops.com/archives/powershell-streams-write-host-write-output-write-verbose-write-error/) | [PS Write Option](Notes/PowerShell/PS_Write_Option.md) |
 
 
 # Skills Needed

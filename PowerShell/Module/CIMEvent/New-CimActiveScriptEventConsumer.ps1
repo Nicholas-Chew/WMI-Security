@@ -1,4 +1,4 @@
-﻿function New-CimEventFilter
+﻿function New-CimActiveScriptEventConsumer
 {
     [CmdletBinding()]
     Param(
@@ -15,13 +15,6 @@
 
         [Parameter(
             Mandatory = $false,
-            HelpMessage = "Namespace for event query to be executed on. Default:root\cimv2"
-            )]
-        [ValidateNotNullOrEmpty()]
-        $EventNamespace = 'root\cimv2',
-
-        [Parameter(
-            Mandatory = $false,
             HelpMessage = "Namespace for event query to be executed on. Default:root\subscription"
             )]
         [ValidateNotNullOrEmpty()]
@@ -30,12 +23,27 @@
 
         [Parameter(
             Mandatory = $true,
-            HelpMessage = "WQL event query to be used for this event filter."
+            HelpMessage = "Name of the scripting engine to us. VBScript or jscript"
+            )]
+        [ValidateSet('VBScript', 'jscript')]
+        [string]
+        $ScriptingEngine,
+
+        [Parameter(
+            Mandatory = $true,
+            HelpMessage = "File location of the script"
             )]
         [string]
-        $Query,
+        $ScriptFileLocation,
 
-        #End of Cim Event Filter Parameter
+        [Parameter(
+            Mandatory = $true,
+            HelpMessage = "Number, in seconds, that the script is allowed to run."
+            )]
+        [UInt32]
+        $KillTimeout = 0,
+
+        #Cim of WMI Event Filter Parameter
 
 
         #Common Parameter
@@ -114,16 +122,19 @@
 
     process
     {      
-        $filterParam = @{
-            QueryLanguage = "WQL"
-            Query = $query
+        Write-Verbose Reading scirpt text from script file
+        $vbs = Get-Content $ScriptFileLocation | Out-String
+
+        $consumerParam = @{
             Name = $Name
-            EventNameSpace = $EventNamespace
+            ScriptText = $vbs
+            ScriptingEngine= $ScriptingEngine
+            KillTimeout = $KillTimeout
         }
 
-        $filter = New-CimInstance -ClassName __EventFilter -Namespace $Namespace -CimSession $CimSession -Property $filterParam
-        
-        rv filterParam
+
+        $consumer = New-CimInstance -ClassName ActiveScriptEventConsumer -Namespace $Namespace -CimSession $CimSession -Property $consumerParam
+
     }
 
     end

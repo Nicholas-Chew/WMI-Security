@@ -1,24 +1,9 @@
-﻿function New-CimEventFilter
+﻿function New-CimActiveScriptEventConsumer
 {
     [CmdletBinding()]
     Param(
         
         #Cim Event Filter Parameter
-
-        [Parameter(
-            Mandatory = $true,
-            HelpMessage = "Name of event filter."
-            )]
-        [ValidateNotNullOrEmpty()]
-        [string]
-        $Name,
-
-        [Parameter(
-            Mandatory = $false,
-            HelpMessage = "Namespace for event query to be executed on. Default:root\cimv2"
-            )]
-        [ValidateNotNullOrEmpty()]
-        $EventNamespace = 'root\cimv2',
 
         [Parameter(
             Mandatory = $false,
@@ -30,12 +15,20 @@
 
         [Parameter(
             Mandatory = $true,
-            HelpMessage = "WQL event query to be used for this event filter."
+            HelpMessage = "Path for Cim Event Consumer"
             )]
-        [string]
-        $Query,
+        [ciminstance]
+        $Consumer,
 
-        #End of Cim Event Filter Parameter
+        [Parameter(
+            Mandatory = $true,
+            HelpMessage = "Path for Cim Event Consumer"
+            )]
+        [ciminstance]
+        $Filter,
+
+
+        #Cim of WMI Event Filter Parameter
 
 
         #Common Parameter
@@ -114,16 +107,14 @@
 
     process
     {      
-        $filterParam = @{
-            QueryLanguage = "WQL"
-            Query = $query
-            Name = $Name
-            EventNameSpace = $EventNamespace
-        }
+        $bindingParam = @{
+            Filter = [ref]$Filter
+            Consumer = [ref]$Consumer
+         }
 
-        $filter = New-CimInstance -ClassName __EventFilter -Namespace $Namespace -CimSession $CimSession -Property $filterParam
-        
-        rv filterParam
+         New-CimInstance -ClassName __FilterToConsumerBinding -Namespace root/subscription -CimSession $CimSession -Property $bindingParam | out-null
+
+
     }
 
     end
