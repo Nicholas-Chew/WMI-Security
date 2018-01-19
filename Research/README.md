@@ -32,6 +32,7 @@
 | [**Use PowerShell to Create a Permanent WMI Event to Launch a VBScript - Microsoft**](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/20/use-powershell-to-create-a-permanent-wmi-event-to-launch-a-vbscript/) | [**WMI Event**](Notes/WMI_Event.md) |
 | [**WMI Filtering with Cim CmdLets**](https://social.technet.microsoft.com/Forums/scriptcenter/en-US/35a482d6-daf4-422a-80d2-828be85efd99/trouble-with-wmi-filtering-with-powershell-and-cim-cmdlets?forum=ITCG) | |
 | [Use PowerShell to Create a Permanent WMI Event to Launch a VBScript](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/20/use-powershell-to-create-a-permanent-wmi-event-to-launch-a-vbscript/) | |
+| [WMI Recieving Timed or Repeating Event](https://msdn.microsoft.com/en-us/library/aa389759(v=vs.85).aspx)| |
 | | |
 | **WQL** |  |
 | [Three Easy Ways to Use PowerShell and WQL to Get WMI Data - Microsoft](https://blogs.technet.microsoft.com/heyscriptingguy/2012/07/10/three-easy-ways-to-use-powershell-and-wql-to-get-wmi-data/) | |
@@ -59,8 +60,10 @@
 | [**Should I use CIM or WMI with Windows PowerShell?**](https://blogs.technet.microsoft.com/heyscriptingguy/2016/02/08/should-i-use-cim-or-wmi-with-windows-powershell) | [**CIM vs WMI**](Notes/CIM_vs_WMI.md) |
 | | |
 | **PowerShell** |  |
-| [PowerShell streams: Write-Host, Write-Output, Write-Verbose, Write-Error](https://4sysops.com/archives/powershell-streams-write-host-write-output-write-verbose-write-error/) | [PS Write Option](Notes/PowerShell/PS_Write_Option.md) |
-
+| [**PowerShell streams: Write-Host, Write-Output, Write-Verbose, Write-Error**](https://4sysops.com/archives/powershell-streams-write-host-write-output-write-verbose-write-error/) | [**PS Write Option**](Notes/PowerShell/PS_Write_Option.md) |
+| [Calling C# code in Powershell and vice versa](http://executeautomation.com/blog/calling-c-code-in-powershell-and-vice-versa/) | |
+| **Hacking Tecchnique**|  |
+| [**Why Domain Generating Algorithms (DGAs)**](https://blog.trendmicro.com/domain-generating-algorithms-dgas/)| [**Domain Generating Algorithms**](Notes/Domain_Generating_Algorithms.md) |
 
 # Skills Needed
 - [x] Power Shell Scripting

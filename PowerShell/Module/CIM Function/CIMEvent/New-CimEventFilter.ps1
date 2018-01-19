@@ -114,14 +114,14 @@
 
     process
     {      
-        $filterParam = @{
+        $FilterParam = @{
             QueryLanguage = "WQL"
             Query = $query
             Name = $Name
             EventNameSpace = $EventNamespace
         }
 
-        $filter = New-CimInstance -ClassName __EventFilter -Namespace $Namespace -CimSession $CimSession -Property $filterParam
+        $Filter = New-CimInstance -ClassName __EventFilter -Namespace $Namespace -CimSession $CimSession -Property $FilterParam
         
         rv filterParam
     }
@@ -135,6 +135,6 @@
             $CimSession | Remove-CimSession
         }
 
-        return $filter
+        return $Filter
     }
 }

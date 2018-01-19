@@ -123,17 +123,17 @@
     process
     {      
         Write-Verbose Reading scirpt text from script file
-        $vbs = Get-Content $ScriptFileLocation | Out-String
+        $Vbs = Get-Content $ScriptFileLocation | Out-String
 
-        $consumerParam = @{
+        $ConsumerParam = @{
             Name = $Name
-            ScriptText = $vbs
+            ScriptText = $Vbs
             ScriptingEngine= $ScriptingEngine
             KillTimeout = $KillTimeout
         }
 
 
-        $consumer = New-CimInstance -ClassName ActiveScriptEventConsumer -Namespace $Namespace -CimSession $CimSession -Property $consumerParam
+        $Consumer = New-CimInstance -ClassName ActiveScriptEventConsumer -Namespace $Namespace -CimSession $CimSession -Property $ConsumerParam
 
     }
 

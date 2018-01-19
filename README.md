@@ -3,7 +3,10 @@
 
 ## Next TODO
 - [ ] Study on APT 29 thoroughly 
-- [ ] Create a WMI Event PowerShell Module
+
+## Done
+- [x] Create a WMI Event PowerShell Module
+- [x] Setup a simulated cooperate network
 
 ## Work Flow
 1. Fork and clone the repo.
