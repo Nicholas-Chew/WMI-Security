@@ -21,10 +21,14 @@
 | **Abusing WMI** |  |
 | [**Abusing Windows Management Instrumentation (WMI) to Build a Persistent, Asynchronous, and Fileless Backdoor - BlackHat USA 15**](https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor.pdf) | |
 | [**Abusing Windows Management Instrumentation (WMI) to Build a Persistent, Asynchronous, and Fileless Backdoor - Infomation Security Newspaper**](http://www.securitynewspaper.com/2015/10/10/abusing-windows-management-instrumentation-wmi-to-build-a-persistent-asynchronous-and-fileless-backdoor/) | |
-| [Creating WMI Permanent Event Subscription Using MOF - CodeProject](https://www.codeproject.com/Articles/28226/Creating-WMI-Permanent-Event-Subscriptions-Using-M) | |
+| [**Creating WMI Permanent Event Subscription Using MOF - CodeProject**](https://www.codeproject.com/Articles/28226/Creating-WMI-Permanent-Event-Subscriptions-Using-M) | |
 | [Dissecting APT29 - FireEye](https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html) | |
 | [**Explained: WMI hijackers - MalwareBytes**](https://blog.malwarebytes.com/cybercrime/2016/10/explained-wmi-hijackers/) | |
 | [WMI Attacks - hackinsight](http://www.hackinsight.org/news,469.html) | |
+| [secabstraction/WmiSploit](https://github.com/secabstraction/WmiSploit) ||
+| [ChrisTruncer/WMImplant](https://github.com/ChrisTruncer/WMImplant) ||
+| [mattifestation/WMI_Backdoor](https://github.com/mattifestation/WMI_Backdoor)||
+| [PowerShellMafia/PowerSploit](https://github.com/PowerShellMafia/PowerSploit)||
 | | |
 | **WMI Event Subscription** |  |
 | [**PowerShell and Events: Permanent WMI Event Subscriptions - Learn PowerShell**](https://learn-powershell.net/2013/08/14/powershell-and-events-permanent-wmi-event-subscriptions/) | [**Ways To Create WMI Event**](Notes/Ways_To_Create_WMI_Event.md) |

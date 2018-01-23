@@ -1,0 +1,13 @@
+
+
+¨€¨€¨[    ¨€¨€¨[¨€¨€¨€¨[   ¨€¨€¨€¨[¨€¨€¨[¨€¨€¨€¨€¨€¨€¨[ ¨€¨€¨€¨€¨€¨€¨€¨[¨€¨€¨€¨[   ¨€¨€¨[
+¨€¨€¨U    ¨€¨€¨U¨€¨€¨€¨€¨[ ¨€¨€¨€¨€¨U¨€¨€¨U¨€¨€¨X¨T¨T¨€¨€¨[¨€¨€¨X¨T¨T¨T¨T¨a¨€¨€¨€¨€¨[  ¨€¨€¨U
+¨€¨€¨U ¨€¨[ ¨€¨€¨U¨€¨€¨X¨€¨€¨€¨€¨X¨€¨€¨U¨€¨€¨U¨€¨€¨€¨€¨€¨€¨X¨a¨€¨€¨€¨€¨€¨[  ¨€¨€¨X¨€¨€¨[ ¨€¨€¨U
+¨€¨€¨U¨€¨€¨€¨[¨€¨€¨U¨€¨€¨U¨^¨€¨€¨X¨a¨€¨€¨U¨€¨€¨U¨€¨€¨X¨T¨T¨T¨a ¨€¨€¨X¨T¨T¨a  ¨€¨€¨U¨^¨€¨€¨[¨€¨€¨U
+¨^¨€¨€¨€¨X¨€¨€¨€¨X¨a¨€¨€¨U ¨^¨T¨a ¨€¨€¨U¨€¨€¨U¨€¨€¨U     ¨€¨€¨€¨€¨€¨€¨€¨[¨€¨€¨U ¨^¨€¨€¨€¨€¨U
+ ¨^¨T¨T¨a¨^¨T¨T¨a ¨^¨T¨a     ¨^¨T¨a¨^¨T¨a¨^¨T¨a     ¨^¨T¨T¨T¨T¨T¨T¨a¨^¨T¨a  ¨^¨T¨T¨T¨a
+                                                  
+												  
+		- WMI Based Pentration Tool -
+		
+		Version : %s
