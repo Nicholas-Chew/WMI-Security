@@ -29,6 +29,8 @@ def do_use(self, s):
         
     except ModuleNotFoundError:
         print("Failed to load module: "+s)
+    except RuntimeError:
+        print("Failed to load module: "+s)
  
 @inclass(wmipen.core.Core)
 def complete_use(self, text, line, begidx, endidx):

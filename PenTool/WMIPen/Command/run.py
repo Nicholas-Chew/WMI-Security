@@ -12,7 +12,7 @@ from wmipen.inclass import inclass
 @inclass(wmipen.core.Core) 
 def do_run(self):
     if hasattr(self,'module'):
-        self.module.run()
+        self.module.run(self.options)
     else:
         print("No such command")        
  

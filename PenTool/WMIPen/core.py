@@ -25,7 +25,7 @@ class Core(cmd.Cmd, object):
         self.options = wmipen.option.Options()
         
         self.options.add("RHOST","0.0.0.0", True, "The target address")
-        self.options.add("RDOMAIN",".", True, "The target domain")
+        self.options.add("RDOMAIN","", True, "The target domain")
         self.options.add("RUSER","Administrator", True, "The target username")
         self.options.add("RPASS","", True, "The target password")
     
