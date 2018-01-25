@@ -68,6 +68,7 @@
 | [Calling C# code in Powershell and vice versa](http://executeautomation.com/blog/calling-c-code-in-powershell-and-vice-versa/) | |
 | **Hacking Tecchnique**|  |
 | [**Why Domain Generating Algorithms (DGAs)**](https://blog.trendmicro.com/domain-generating-algorithms-dgas/)| [**Domain Generating Algorithms**](Notes/Domain_Generating_Algorithms.md) |
+| [Proxy Pivoting](http://resources.infosecinstitute.com/vpn-pivoting/#gref)| |
 
 # Skills Needed
 - [x] Power Shell Scripting

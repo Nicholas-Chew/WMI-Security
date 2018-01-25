@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 23 2018
+
+@author: Chew Zhi Jie
+"""
+
 class Option(object):
     def __init__(self, name, value, required, description):
         self.name = name

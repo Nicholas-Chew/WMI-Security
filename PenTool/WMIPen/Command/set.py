@@ -6,10 +6,10 @@ Created on Tue Jan 23 13:48:11 2018
 """
 import sys
 sys.path.append('../')
-import WMIPen.core
-from WMIPen.inclass import inclass
+import wmipen.core
+from wmipen.inclass import inclass
 
-@inclass(WMIPen.core.Core)
+@inclass(wmipen.core.Core)
 def do_set(self, s):
     arg = s.split()
     
@@ -23,7 +23,7 @@ def do_set(self, s):
     else:
         print ("Unknown variable " + arg[0])
     
-@inclass(WMIPen.core.Core)
+@inclass(wmipen.core.Core)
 def help_set(self):
     print ("Usage set [option] [value]")
     print ("\nSet the given option to value. If value is omitted, print the current value.")

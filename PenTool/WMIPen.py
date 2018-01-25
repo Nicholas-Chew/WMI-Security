@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan 23 13:24:56 2018
+Created on Tue Jan 23 2018
 
 @author: Chew Zhi Jie
 """
@@ -10,11 +10,11 @@ _author = "chewzhijie"
 
 if __name__ == "__main__":
     
-    import WMIPen.core
+    import wmipen.core
 
     banner = open("Data/banner.txt", "rb").read().decode("unicode_escape")
     
-    helllo = "hello"
-    coreLoop = WMIPen.core.Core(banner,_version)
+    coreLoop = wmipen.core.Core(banner,_version)
+    coreLoop.prompt = 'WMIPen > '
     coreLoop.cmdloop()
 

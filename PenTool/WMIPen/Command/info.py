@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan 23 13:48:11 2018
+Created on Tue Jan 23 2018
 
 @author: Chew Zhi Jie
 """
 import sys
 sys.path.append('../')
-import WMIPen.core
-from WMIPen.inclass import inclass
+import wmipen.core
+from wmipen.inclass import inclass
 
-@inclass(WMIPen.core.Core)
+@inclass(wmipen.core.Core)
 def do_info(self, s):
-    print ("TODO")
+    if hasattr(self,'module'):
+        self.module.help()
+    else:
+        print("No active module. Please use ""use [module_name]"" to start interacting with the module.")
  
-@inclass(WMIPen.core.Core)
+@inclass(wmipen.core.Core)
 def help_info(self):
-    print ("TODO")
+    print ("Show info for current active module.")
     
