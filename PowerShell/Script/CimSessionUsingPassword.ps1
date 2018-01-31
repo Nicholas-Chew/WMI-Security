@@ -1,3 +1,3 @@
-﻿$Secpasswd = ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force
-$Creds = New-Object System.Management.Automation.PSCredential ("wmiserver\dministrator", $secpasswd)
-$CimSession = New-CimSession -ComputerName ComputerName -Credential $Creds
+﻿$Secpasswd = ConvertTo-SecureString "Secret" -AsPlainText -Force
+$Creds = New-Object System.Management.Automation.PSCredential ("Administration", $secpasswd)
+$CimSession = New-CimSession -ComputerName 0.0.0.0 -Credential $Creds
