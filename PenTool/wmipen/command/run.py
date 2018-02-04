@@ -10,7 +10,7 @@ import wmipen.core
 from wmipen.inclass import inclass
 
 @inclass(wmipen.core.Core) 
-def do_run(self):
+def do_run(self, s):
     if hasattr(self,'module'):
         self.module.run(self.options)
     else:
