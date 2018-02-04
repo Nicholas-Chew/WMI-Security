@@ -9,10 +9,9 @@ _version = "0.1"
 _author = "chewzhijie"
 
 if __name__ == "__main__":
-    
     import wmipen.core
 
-    banner = open("Data/banner.txt", "rb").read().decode("unicode_escape")
+    banner = open("data/banner.txt", "rb").read().decode("unicode_escape")
     
     coreLoop = wmipen.core.Core(banner,_version)
     coreLoop.prompt = 'WMIPen > '

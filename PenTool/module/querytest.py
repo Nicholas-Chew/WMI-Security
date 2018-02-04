@@ -4,11 +4,13 @@ Created on Tue Jan 24 2018
 
 @author: Chew Zhi Jie
 """
-from library.impacket.dcerpc.v5.dtypes import NULL
-from library.impacket.dcerpc.v5.dcom import wmi
-from library.impacket.dcerpc.v5.dcomrt import DCOMConnection
-
+import sys
+sys.path.append('../')
 import wmipen.module
+
+from impacket.dcerpc.v5.dtypes import NULL
+from impacket.dcerpc.v5.dcom import wmi
+from impacket.dcerpc.v5.dcomrt import DCOMConnection
 
 class QueryTest(wmipen.module.Module):
     
@@ -21,88 +23,76 @@ class QueryTest(wmipen.module.Module):
         
     def run(self, options):
         namespace = '//./root/cimv2'
-        delimiter = '|'
-        conn = None
-        classObject = None
-        wmiService = None
-        wmiLogin = None
+        wql = 'select name from win32_account'
 
         try:
-            conn = DCOMConnection(options.get("RHOST"), options.get("RUSER"), options.get("RPASS"), options.get("RDOMAIN"), '', '',
-                                  None, oxidResolver=True, doKerberos=False)
-            wmiInterface = conn.CoCreateInstanceEx(wmi.CLSID_WbemLevel1Login, wmi.IID_IWbemLevel1Login)
+            dcom = DCOMConnection(options.get('RHOST'), options.get('RUSER'), options.get('RPASS'), options.get('RDOMAIN'),
+                                  '', '', None, oxidResolver=True, doKerberos=False) 
+            
+            wmiInterface = dcom.CoCreateInstanceEx(wmi.CLSID_WbemLevel1Login, wmi.IID_IWbemLevel1Login)
             wmiLogin = wmi.IWbemLevel1Login(wmiInterface)
-            wmiService = wmiLogin.NTLMLogin(namespace, NULL, NULL)
+            wmiServices = wmiLogin.NTLMLogin(namespace, NULL,  NULL)
             wmiLogin.RemRelease()
-            wql = "SELECT * FROM Win32_Process"
-            queryObject = wmiService.ExecQuery(wql.strip('\n'),
-                                               wmi.WBEM_FLAG_RETURN_IMMEDIATELY | wmi.WBEM_FLAG_ENSURE_LOCATABLE)
-            self.print_results(queryObject, delimiter)
-            queryObject.RemRelease()
-
-            wmiService.RemRelease()
-            conn.disconnect()
+            
+            '''
+            DO STUFF HERE - query
+            '''
+            wmiQueryObject = wmiServices.ExecQuery(wql.strip('\n'))
+            self._printReply_(wmiQueryObject)
+            wmiQueryObject.RemRelease()
+            
+            wmiServices.RemRelease()    
+            dcom.disconnect()                            
         except Exception as e:
-            if classObject is not None:
-                classObject.RemRelease()
-            if wmiLogin is not None:
-                wmiLogin.RemRelease()
-            if wmiService is not None:
-                wmiService.RemRelease()
-            if conn is not None:
-                conn.disconnect()
-            raise Exception("Could not connect to %s: %s" % (self.host, e.message))
+            print(str(e))
+            try:
+                if wmiLogin is not None:
+                    wmiLogin.RemRelease()
+                if wmiServices is not None:
+                    wmiServices.RemRelease()
+                if dcom is not None:
+                    dcom.disconnect()
+            except Exception:
+                pass
+
+    def _printReply_(self, QeuryObject):
+        printHeader = True
         
-    def print_results(self, queryObject, delimiter):
-        """
-        Prints the results in the classObject as wmic.c would
-        :param queryObject: IEnumWbemClassObject
-        :param delimiter: string
-        :return:
-        """
         while True:
             try:
-                classObject = queryObject.Next(0xffffffff, 1)[0]
-                print('CLASS: %s' % classObject.getClassName())
-                record = classObject.getProperties()
-                keys = []
-                for name in record:
-                    keys.append(name.strip())
-                keys = natsorted(keys, alg=ns.IGNORECASE)
-                print (delimiter.join(keys))
-                tmp = []
-                for key in keys:
-                    if key == 'MUILanguages':
-                        vals = []
-                        for v in record[key]['value']:
-                            vals.append(self.get_language(v))
-                        record[key]['value'] = vals
-
-                    if isinstance(record[key]['value'], list):
-                        values = []
-                        for v in record[key]['value']:
-                            values.append(
-                                self.format_value(v, record[key]['qualifiers']['CIMTYPE'], record[key]['type']))
-                        tmp.append('(%s)' % ','.join(values))
+                pEnum = QeuryObject.Next(0xffffffff,1)[0]
+                record = pEnum.getProperties()
+                if printHeader is True:
+                    print('|')
+                    for col in record:
+                        print ('%s |' % col)
+                    print('')
+                    printHeader = False
+                
+                for key in record:
+                    if type(record[key]['value']) is list:
+                        for item in record[key]['value']:
+                            print(item)
+                        print('|')
                     else:
-                        tmp.append('%s' % self.format_value(record[key]['value'], record[key]['qualifiers']['CIMTYPE'],
-                                                            record[key]['type']))
-                print (delimiter.join(tmp))
+                        print('%s |' % record[key]['value'])
+                print('')
             except Exception as e:
-                if e.get_error_code() != wmi.WBEMSTATUS.WBEM_S_FALSE:
+                if str(e).find('S_FAKSE') < 0:
                     raise
                 else:
                     break
-                
+        QeuryObject.RemRelease()
+            
 if __name__ == "__main__":
     query = QueryTest()
     import wmipen.option
     options = wmipen.option.Options()
         
-    options.add("RHOST","35.197.141.62", True, "The target address")
+    options.add("RHOST","10.0.75.2", True, "The target address")
     options.add("RDOMAIN","", True, "The target domain")
-    options.add("RUSER","chewzhijie0426", True, "The target username")
-    options.add("RPASS","w6;I@Ryq=Wo&>P3", True, "The target password")
+    options.add("RUSER","Administrator", True, "The target username")
+    options.add("RPASS","P@ssw0rd!", True, "The target password")
     
     query.run(options)
     
