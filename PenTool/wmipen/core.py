@@ -27,15 +27,11 @@ class Core(cmd.Cmd, object):
         self.options.add("RHOST","0.0.0.0", True, "The target address")
         self.options.add("RDOMAIN","", True, "The target domain")
         self.options.add("RUSER","Administrator", True, "The target username")
-        self.options.add("RPASS","", True, "The target password")
+        self.options.add("PROTOCOL","", True, "Protocol Use: WinRM or WMIC")
     
-    def preloop(self):
         self._print_banner_()
         super(Core,self).preloop()
         
-    def postloop(self):
-        print ("Goodbye")
-        super(Core,self).postloop()
         
     def _print_banner_(self):
         os.system("clear")

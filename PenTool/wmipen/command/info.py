@@ -18,5 +18,5 @@ def do_info(self, s):
  
 @inclass(wmipen.core.Core)
 def help_info(self):
-    print ("Show info for current active module.")
+    print ("Display the infomation for current active module.")
     

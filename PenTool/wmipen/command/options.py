@@ -21,4 +21,4 @@ def do_options(self, s):
  
 @inclass(wmipen.core.Core)
 def help_options(self):
-    print ("Qurries the options for the current Session")
+    print ("Display the WMI connection parameter for the current session")
