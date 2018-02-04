@@ -12,7 +12,6 @@ from wmipen.inclass import inclass
 @inclass(wmipen.core.Core)
 def do_search(self, s):
     for module in self.modules:
-        if not module == "__init__":
             print (module)
     
 @inclass(wmipen.core.Core)

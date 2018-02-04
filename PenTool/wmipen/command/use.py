@@ -21,7 +21,8 @@ def do_use(self, s):
     
     #Import and initialize module
     try:
-        env = importlib.import_module("module."+ s)
+        mod = s.replace('/','.')
+        env = importlib.import_module("module."+ mod)
         for name, obj in inspect.getmembers(env):
             if inspect.isclass(obj) and issubclass(obj, wmipen.module.Module):
                 self.module = obj()

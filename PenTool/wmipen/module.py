@@ -23,10 +23,15 @@ class Modules:
     @staticmethod
     def avaliableModule():
         modules = []
-        for file in os.listdir("module/"):
-            if file.endswith(".py"):
-                modules.append(file[:-3])
+        for root, dirs, filenames in os.walk("module"):
+            for filename in filenames:
+                if filename.endswith(".py") and not filename == "__init__.py":
+                    file = os.path.join(root,filename)
+                    modules.append((file[7:])[:-3])
+                    
         return modules
+
+
     
 
     

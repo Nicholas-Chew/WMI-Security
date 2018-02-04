@@ -8,6 +8,6 @@
                                                   
 												  
 
-		- WMI Based Pentration Tool -
+        - WMI Based Pentration Tool -
 		
-		Version : %s
+        	Version : %s
