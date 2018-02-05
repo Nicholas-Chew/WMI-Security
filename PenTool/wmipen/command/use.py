@@ -34,7 +34,18 @@ def do_use(self, s):
 
 @inclass(wmipen.core.Core)
 def complete_use(self, text, line, begidx, endidx):
-    return [i for i in self.modules if i.startswith(text)]
+    MODULE = self.modules
+    
+    if not text:
+        completions = MODULE[:]
+    else:
+        completions = [i 
+                       for i in MODULE 
+                       if i.startswith(text)
+                       ]
+
+    print(completions)
+    return completions
 
 @inclass(wmipen.core.Core) 
 def help_use(self):

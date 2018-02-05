@@ -18,4 +18,3 @@ if __name__ == "__main__":
     coreLoop = wmipen.core.Core(banner,__version__)
     coreLoop.prompt = 'WMIPen > '
     coreLoop.cmdloop()
-

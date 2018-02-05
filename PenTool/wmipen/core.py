@@ -29,9 +29,11 @@ class Core(cmd.Cmd, object):
         self.options.add("RUSER","Administrator", True, "The target username")
         self.options.add("PROTOCOL","", True, "Protocol Use: WinRM or WMIC")
     
-        self._print_banner_()
-        super(Core,self).preloop()
+        self._print_banner_()        
         
+    def postcmd(self, stop, line):
+        print("")
+        return cmd.Cmd.postcmd(self, stop, line)
         
     def _print_banner_(self):
         os.system("clear")

@@ -12,7 +12,8 @@ from wmipen.inclass import inclass
 @inclass(wmipen.core.Core)
 def do_search(self, s):
     for module in self.modules:
-            print (module)
+        print (module)
+    print("")
     
 @inclass(wmipen.core.Core)
 def help_search(self):
