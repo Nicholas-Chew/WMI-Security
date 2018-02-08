@@ -14,7 +14,7 @@ if __name__ == "__main__":
     import wmipen.core
 
     banner = open("data/banner.txt", "rb").read().decode("utf-8")
-    
-    coreLoop = wmipen.core.Core(banner,__version__)
+
+    coreLoop = wmipen.core.Core(banner, __version__)
     coreLoop.prompt = 'WMIPen > '
     coreLoop.cmdloop()
