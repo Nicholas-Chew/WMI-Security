@@ -5,9 +5,6 @@ Created on Tue Jan 24 2018
 @author: Chew Zhi Jie
 """
 
-import protocol.wsman as wsman
-import protocol.dcom as dcom
-
 from abc import abstractmethod
 import os
 import sys
@@ -22,8 +19,10 @@ class Module(object):
 
     def connect(self, options):
         if options.get('PROTOCOL') == "DCOM":
+            import protocol.dcom as dcom
             self.session = dcom.DCOM(options)
         else:
+            import protocol.wsman as wsman
             self.session = wsman.WSMan(options)
 
     def execute(self, options):

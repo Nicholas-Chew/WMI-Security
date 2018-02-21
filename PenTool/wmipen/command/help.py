@@ -13,7 +13,7 @@ sys.path.append('../')
 
 @inclass(wmipen.core.Core)
 def do_help(self, s):
-    print """
+    print ("""
     Core Commands
     =============
 
@@ -31,4 +31,4 @@ def do_help(self, s):
         -------        -----------
         info           Display all WMI connection parameter
         run            Execute the current active module
-    """
+    """)

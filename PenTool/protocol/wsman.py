@@ -22,9 +22,9 @@ class WSMan(object):
     def gwmi(self, wmiclass):
         try:
             r = self.session.run_ps('gwmi -Query "' + wmiclass + '"')
-            print(r.status_code)
-            print(r.std_out)
-            print(r.std_err)
+            print(str(r.status_code, 'utf-8'))
+            print(str(r.std_out, 'utf-8'))
+            print(str(r.std_err, 'utf-8'))
         except Exception as e:
             raise e
 
