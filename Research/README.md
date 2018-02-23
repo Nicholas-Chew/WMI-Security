@@ -47,7 +47,6 @@
 | [Exploit Monday](http://www.exploit-monday.com/?m=1) | |
 | | |
 | **GitHub** |  |
-| https://github.com/mattifestation | |
 | [WMI Implant](https://github.com/ChrisTruncer/WMImplant) | |
 | [Awsome Hacking Resource](https://github.com/vitalysim/Awesome-Hacking-Resources) | | |
 | [Awsome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | | |
@@ -69,6 +68,12 @@
 | **Hacking Tecchnique**|  |
 | [**Why Domain Generating Algorithms (DGAs)**](https://blog.trendmicro.com/domain-generating-algorithms-dgas/)| [**Domain Generating Algorithms**](Notes/Domain_Generating_Algorithms.md) |
 | [Proxy Pivoting](http://resources.infosecinstitute.com/vpn-pivoting/#gref)| |
+| **WMI Defense** |  |
+| [WMI Detection using WMI permenant event](https://gist.github.com/mattifestation/fa2e3cea76f70b1e2267) | |
+| [**WMI Provider Logging**](https://msdn.microsoft.com/en-us/library/aa827354(v=vs.85).aspx) | [WMI Provider Logging](Notes/WMI_Defence/WMI_Provider_Logging.md) |
+| [Tracing WMI Activity](https://msdn.microsoft.com/en-us/library/aa826686(v=vs.85).aspx( |  |
+| [Flare WMI](https://github.com/fireeye/flare-wmi) |  |
+
 
 # Skills Needed
 - [x] Power Shell Scripting
