@@ -17,6 +17,7 @@
 | [WINDOWS MANAGEMENT INSTRUMENTATION (WMI) OFFENSE, DEFENSE, AND FORENSICS - FireEye](https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf) | |
 | [**Windows Management Instrumentation - Microsoft**](https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx) | |
 | [WMI vs. WMI: Monitoring for Malicious Activity - FireEye](https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html) | |
+| [WMI for Administator](https://msdn.microsoft.com/en-us/library/aa827354(v=vs.85).aspx) | |
 | | |
 | **Abusing WMI** |  |
 | [**Abusing Windows Management Instrumentation (WMI) to Build a Persistent, Asynchronous, and Fileless Backdoor - BlackHat USA 15**](https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor.pdf) | |
@@ -71,7 +72,7 @@
 | **WMI Defense** |  |
 | [WMI Detection using WMI permenant event](https://gist.github.com/mattifestation/fa2e3cea76f70b1e2267) | |
 | [**WMI Provider Logging**](https://msdn.microsoft.com/en-us/library/aa827354(v=vs.85).aspx) | [WMI Provider Logging](Notes/WMI_Defence/WMI_Provider_Logging.md) |
-| [Tracing WMI Activity](https://msdn.microsoft.com/en-us/library/aa826686(v=vs.85).aspx( |  |
+| [Tracing WMI Activity](https://msdn.microsoft.com/en-us/library/aa826686(v=vs.85).aspx) |  |
 | [Flare WMI](https://github.com/fireeye/flare-wmi) |  |
 
 

@@ -1,6 +1,5 @@
-# WMI Logging
-## WMI Provider Log Files
-WMI Provider may also maintains logs. Different prividers output different logs.
+# WMI Provider Log Files
+WMI Provider may also maintains logs. Different provider output different logs.
 
 The logs may be located in the following log directory:
 
@@ -15,12 +14,12 @@ It contains:
 4. Printout WNODE 
 
 #### WDW Provier
-The WDM (Windows Driver Model) provider grant access to the classes, instances, methods, and events of hardware drivers hat confrom to the WDM model. 
+The WDM (Windows Driver Model) provider grant access to the classes, instances, methods, and events of hardware drivers that confirm to the WDM model. 
 The classes for hardware drivers reside in the "root\wmi namespace"
 
 WDM classes are primarily in Wmi.mof.
 
-WDM is an OS interface through which hardware components provide infomation and event notification. The WDM provider is a class, instance, event, and method provider that allows management application to access tot data and events from WMI-for-WDM enabled device drivers.
+WDM is an OS interface through which hardware components provide information and event notification. The WDM provider is a class, instance, event, and method provider that allows management application to access tot data and events from WMI-for-WDM enabled device drivers.
 The classes created by the WDM provider to represent device driver data reside only in the "Root\WMI" namespace. This namespace must already exist before the WDM provider will process the installed WDM drivers.
 
 The WDM provider supports the WMIEvent extrinsic event, which notifies WMI regarding events from WDM-based drivers. You can register your event consumers for WMIEvent events as you would any other event.
@@ -36,7 +35,7 @@ The Event log provider uses the ```Win32_NTEventLogFile``` class to map data fro
 It also uses the ```Win32_NTLogEvent``` class to represent events. 
 These two ```_Win32Provider``` instance names are MS_NT_EVENTLOG_PROVIDER & MS_NT_EVENTLOG_EVENT_PROVIDER
 
-As an instance, method, and event provider the Event Log provider implements standrad ```IWbemProviderInit``` interface, as well as the following ```IWBemServices``` methods:
+As an instance, method, and event provider the Event Log provider implements standard ```IWbemProviderInit``` interface, as well as the following ```IWBemServices``` methods:
  - CreateInstanceEnumAsync
  - ExecMethodAcync
  - ExecNotificationQueryAsync
@@ -52,7 +51,7 @@ Event Log Provider supports the following classes:
  - Win32_NTLogEventComputer
  
 ### Ntevt.log
-This log contains trace infomation and error messages for Active Diretory Provider
+This log contains trace information and error messages for Active Directory Provider
  
  
  
