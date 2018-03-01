@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IDSTool.Properties
+namespace WMIIDS.Properties
 {
 
 
