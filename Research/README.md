@@ -66,7 +66,7 @@
 | **PowerShell** |  |
 | [**PowerShell streams: Write-Host, Write-Output, Write-Verbose, Write-Error**](https://4sysops.com/archives/powershell-streams-write-host-write-output-write-verbose-write-error/) | [**PS Write Option**](Notes/PowerShell/PS_Write_Option.md) |
 | [Calling C# code in Powershell and vice versa](http://executeautomation.com/blog/calling-c-code-in-powershell-and-vice-versa/) | |
-| **Hacking Tecchnique**|  |
+| **Hacking Te chnique**|  |
 | [**Why Domain Generating Algorithms (DGAs)**](https://blog.trendmicro.com/domain-generating-algorithms-dgas/)| [**Domain Generating Algorithms**](Notes/Domain_Generating_Algorithms.md) |
 | [Proxy Pivoting](http://resources.infosecinstitute.com/vpn-pivoting/#gref)| |
 | **WMI Defense** |  |
