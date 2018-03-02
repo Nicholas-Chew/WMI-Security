@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
     //Currently these three main Alert Type
-    enum AlertType
+    public enum AlertType
     {
         EventConsumer, SrartupCommand, RegisteryKey
     }

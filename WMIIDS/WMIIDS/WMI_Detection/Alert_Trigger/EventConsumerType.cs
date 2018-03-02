@@ -8,7 +8,7 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
     //Currently only using these two Event Type.
     //There are also LogFileEventConsumer, NTEventLogEventConsumer, SMTPEventConsumer
-    class EventConsumerType
+    public class EventConsumerType
     {
         public static readonly string ActiveScriptEventConsumer = "ActiveScriptEventConsumer";
         public static readonly string CommandLineEventConsumer = "CommandLineEventConsumer";

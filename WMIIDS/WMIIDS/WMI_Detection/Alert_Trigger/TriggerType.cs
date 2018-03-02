@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
-    class TriggerType
+    public class TriggerType
     {
         public static readonly string Creation = "__InstanceCreationEvent";
         public static readonly string Modification = "__InstanceModificationEvent";
