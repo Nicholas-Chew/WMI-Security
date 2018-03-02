@@ -6,14 +6,18 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
     public abstract class Alert
     {
         #region Base variables
+
         protected String TriggerName { get; set; }
         protected TimeSpan PollingInterval { get; set; }
         protected ManagementEventWatcher Watcher { get; set; }
+
         #endregion
 
         #region WMI variables needed from child
+
         protected abstract WqlEventQuery Query { get; }
         protected abstract string NameSpace { get; }
+
         #endregion
 
         public event EventArrivedEventHandler EventArrived;
@@ -39,7 +43,7 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
 
         private void OnEventArrived(EventArrivedEventArgs e)
         {
-            if (EventArrived != null) EventArrived(this, e);
+            EventArrived?.Invoke(this, e);
         }
     }
 }
