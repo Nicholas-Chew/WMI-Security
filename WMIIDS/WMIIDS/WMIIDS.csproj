@@ -69,6 +69,7 @@
     <Compile Include="WMI_Detection\Alert_Trigger\EventComsumerAlert.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\EventConsumerType.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\AlertType.cs" />
+    <Compile Include="WMI_Detection\Alert_Trigger\StartupCommandEventAlert.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\TriggerType.cs" />
   </ItemGroup>
   <ItemGroup>

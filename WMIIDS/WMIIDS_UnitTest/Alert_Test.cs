@@ -10,13 +10,13 @@ namespace WMIIDS_UnitTest
     {
         bool eventRaised;
         [TestMethod]
-        public void ActiveScriptEventConsumer_Event_Fired()
+        public void ActiveScriptEventConsumerAlert_Event_Fired()
         {
             eventRaised = false;
 
-            Alert ASEC = new EventComsumerAlert("my", new System.TimeSpan(0, 0, 1),
+            Alert ASEC = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
                      EventConsumerType.ActiveScriptEventConsumer, TriggerType.Creation);
-            ASEC.EventArrived += new System.Management.EventArrivedEventHandler(RevieceEventSucces);
+            ASEC.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
             ASEC.Start();
 
             var wmiInstance = new WMIInstance("root/subscription", "ActiveScriptEventConsumer");
@@ -25,7 +25,7 @@ namespace WMIIDS_UnitTest
             wmiInstance.AddPropertyValue("ScriptingEngine", "VBScript");
             wmiInstance.Add();
 
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(10);
 
             if (eventRaised)
                 Assert.IsTrue(true,"Event Raised");
@@ -33,6 +33,50 @@ namespace WMIIDS_UnitTest
                 Assert.Fail("Event Not Recieved");
 
             wmiInstance.Remove();
+        }
+
+        [TestMethod]
+        public void CommandLineEventConsumerAlert_Event_Fired()
+        {
+            eventRaised = false;
+
+            Alert CLE = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
+                     EventConsumerType.CommandLineEventConsumer, TriggerType.Creation);
+            CLE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            CLE.Start();
+
+            var wmiInstance = new WMIInstance("root/subscription", "CommandLineEventConsumer");
+            wmiInstance.AddPropertyValue("Name", "UnitTesting");
+            wmiInstance.AddPropertyValue("CommandLineTemplate", "dir");
+            wmiInstance.AddPropertyValue("RunInteractively", true);
+            wmiInstance.AddPropertyValue("WorkingDirectory", "c:\\");
+            wmiInstance.Add();
+
+            System.Threading.Thread.Sleep(10);
+
+            if (eventRaised)
+                Assert.IsTrue(true, "Event Raised");
+            else
+                Assert.Fail("Event Not Recieved");
+
+            wmiInstance.Remove();
+        }
+
+        // TODO: To test this, the test must be run as Admin which could be disasterous. Find another way to test this Alert
+        [TestMethod]
+        public void StartupCommandEventAlert_Event_Fired()
+        {
+            eventRaised = false;
+
+            Alert SCE = new StartupCommandEventAlert("unittest", new System.TimeSpan(0, 0, 1),
+                      TriggerType.Creation);
+            SCE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            SCE.Start();
+
+
+           Assert.IsTrue(true, "Event Raised");
+
+            //wmiInstance.Remove();
         }
 
         private void RevieceEventSucces(object sender, EventArrivedEventArgs e)
