@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
@@ -14,7 +10,7 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
                          this.PollingInterval,
                          String.Format("TargetInstance isa 'Win32_StartupCommand'"));
 
-        protected override string NameSpace => "root/CIMV2";
+        protected override string NameSpace => "ROOT/CIMV2";
 
         public StartupCommandEventAlert(String TriggerName, TimeSpan PollingInterval, String TriggerType) :
             base(TriggerName, PollingInterval)

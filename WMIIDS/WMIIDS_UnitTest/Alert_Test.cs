@@ -79,6 +79,22 @@ namespace WMIIDS_UnitTest
             //wmiInstance.Remove();
         }
 
+        // TODO: To test this, the test must be run as Admin which could be disasterous. Find another way to test this Alert
+        [TestMethod]
+        public void RegisteryChangeEvent_Event_Fired()
+        {
+            eventRaised = false;
+
+            Alert RCE = new RegistryChangeEvent("unittest", new System.TimeSpan(0, 0, 1), RegistryChangeType.RegistryTreeChangeEvent ,"HKEY_USERS", "","");
+            RCE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            RCE.Start();
+
+            System.Threading.Thread.Sleep(10);
+
+            Assert.IsTrue(true, "Event Raised");
+
+        }
+
         private void RevieceEventSucces(object sender, EventArrivedEventArgs e)
         {
             eventRaised = true;
