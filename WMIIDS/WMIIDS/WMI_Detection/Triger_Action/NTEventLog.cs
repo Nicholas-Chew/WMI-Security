@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Management;
 
+using WMIIDS.Facade;
+
 namespace WMIIDS.WMI_Detection.Triger_Action
 {
     public class NTEventLog : Action
@@ -11,13 +13,13 @@ namespace WMIIDS.WMI_Detection.Triger_Action
         // different limits. So just use 30,000 to be safe.
         private const int MaxEventLogEntryLength = 30000;
 
-        public override void DoLog(ManagementBaseObject obj)
+        public override void DoLog(ManagementBaseObject mbo)
         {
             try
             {
                 if(!EventLog.SourceExists("WMI Security Activity"))
                     EventLog.CreateEventSource("WMI Security Activity", "Application");
-                EventLog.WriteEntry("WMI Security Activity", EnsureLogMessageLimit(obj.ToString()), EventLogEntryType.Warning);
+                EventLog.WriteEntry("WMI Security Activity", EnsureLogMessageLimit("WMI Object Dump \n\n" + mbo.AllPropertyToString()), EventLogEntryType.Warning);
             }
             catch(Exception)
             {

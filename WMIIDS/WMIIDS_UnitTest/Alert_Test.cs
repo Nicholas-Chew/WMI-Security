@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using WMIIDS.WMI_Detection.Alert_Trigger;
+using WMIIDS.WMI_Detection.Triger_Action;
 
 namespace WMIIDS_UnitTest
 {
@@ -16,7 +17,7 @@ namespace WMIIDS_UnitTest
 
             Alert ASEC = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
                      EventConsumerType.ActiveScriptEventConsumer, TriggerType.Creation);
-            ASEC.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            ASEC.EventArrived += RevieceEventSucces;
             ASEC.Start();
 
             var wmiInstance = new WMIInstance("root/subscription", "ActiveScriptEventConsumer");
@@ -42,7 +43,7 @@ namespace WMIIDS_UnitTest
 
             Alert CLE = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
                      EventConsumerType.CommandLineEventConsumer, TriggerType.Creation);
-            CLE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            CLE.EventArrived += RevieceEventSucces;
             CLE.Start();
 
             var wmiInstance = new WMIInstance("root/subscription", "CommandLineEventConsumer");
@@ -70,7 +71,7 @@ namespace WMIIDS_UnitTest
 
             Alert SCE = new StartupCommandEventAlert("unittest", new System.TimeSpan(0, 0, 1),
                       TriggerType.Creation);
-            SCE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            SCE.EventArrived += RevieceEventSucces;
             SCE.Start();
 
 
@@ -86,7 +87,7 @@ namespace WMIIDS_UnitTest
             eventRaised = false;
 
             Alert RCE = new RegistryChangeEvent("unittest", new System.TimeSpan(0, 0, 1), RegistryChangeType.RegistryTreeChangeEvent ,"HKEY_USERS", "","");
-            RCE.EventArrived += new EventArrivedEventHandler(RevieceEventSucces);
+            RCE.EventArrived += RevieceEventSucces;
             RCE.Start();
 
             System.Threading.Thread.Sleep(10);
