@@ -73,6 +73,8 @@
     <Compile Include="WMI_Detection\Alert_Trigger\RegistryChangeEvent.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\StartupCommandEventAlert.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\TriggerType.cs" />
+    <Compile Include="WMI_Detection\Triger_Action\Action.cs" />
+    <Compile Include="WMI_Detection\Triger_Action\NTEventLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
