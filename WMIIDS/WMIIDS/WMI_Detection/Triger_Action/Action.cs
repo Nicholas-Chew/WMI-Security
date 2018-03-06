@@ -5,6 +5,11 @@ namespace WMIIDS.WMI_Detection.Triger_Action
 {
     public abstract class Action
     {
+        /// <summary>
+        /// Callback function to bind to Alert Class. Alert.EventArrived += (new Action()).Log
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Log(object sender, EventArrivedEventArgs e)
         {
             try
@@ -17,6 +22,6 @@ namespace WMIIDS.WMI_Detection.Triger_Action
             }
         }
 
-        public abstract void DoLog(ManagementBaseObject obj);
+        protected abstract void DoLog(ManagementBaseObject mbo);
     }
 }

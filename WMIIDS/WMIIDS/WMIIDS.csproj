@@ -70,12 +70,13 @@
       <DependentUpon>WMIIDS.xaml</DependentUpon>
     </Compile>
     <Compile Include="WMI_Detection\Alert_Trigger\Alert.cs" />
-    <Compile Include="WMI_Detection\Alert_Trigger\EventComsumerAlert.cs" />
+    <Compile Include="WMI_Detection\Alert_Trigger\EventComsumer.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\RegistryChangeEvent.cs" />
-    <Compile Include="WMI_Detection\Alert_Trigger\StartupCommandEventAlert.cs" />
+    <Compile Include="WMI_Detection\Alert_Trigger\StartupCommandEvent.cs" />
     <Compile Include="WMI_Detection\Alert_Trigger\TriggerType.cs" />
     <Compile Include="WMI_Detection\Triger_Action\Action.cs" />
     <Compile Include="WMI_Detection\Triger_Action\NTEventLog.cs" />
+    <Compile Include="WMI_Detection\Triger_Action\RemoveWMIInstancecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

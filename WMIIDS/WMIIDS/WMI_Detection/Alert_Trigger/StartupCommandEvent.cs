@@ -3,7 +3,7 @@ using System.Management;
 
 namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
-    public class StartupCommandEventAlert : Alert
+    public class StartupCommandEvent : Alert
     {
         private String TriggerType { get; set; }
         protected override WqlEventQuery Query => new WqlEventQuery(this.TriggerType,
@@ -12,7 +12,7 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
 
         protected override string NameSpace => "ROOT/CIMV2";
 
-        public StartupCommandEventAlert(String TriggerName, TimeSpan PollingInterval, String TriggerType) :
+        public StartupCommandEvent(String TriggerName, TimeSpan PollingInterval, String TriggerType) :
             base(TriggerName, PollingInterval)
         {
             this.TriggerType = TriggerType;

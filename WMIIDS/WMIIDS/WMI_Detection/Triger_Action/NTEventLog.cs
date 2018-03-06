@@ -13,7 +13,7 @@ namespace WMIIDS.WMI_Detection.Triger_Action
         // different limits. So just use 30,000 to be safe.
         private const int MaxEventLogEntryLength = 30000;
 
-        public override void DoLog(ManagementBaseObject mbo)
+        protected override void DoLog(ManagementBaseObject mbo)
         {
             try
             {

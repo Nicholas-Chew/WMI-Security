@@ -3,7 +3,7 @@ using System.Management;
 
 namespace WMIIDS.WMI_Detection.Alert_Trigger
 {
-    public class EventComsumerAlert : Alert
+    public class EventComsumer : Alert
     {
         private String EventConsumerType { get; set; }
         private String TriggerType { get; set; }
@@ -14,7 +14,7 @@ namespace WMIIDS.WMI_Detection.Alert_Trigger
 
         protected override string NameSpace => "ROOT/SUBSCRIPTION";
 
-        public EventComsumerAlert(String TriggerName, TimeSpan PollingInterval, String EventConsumerType, String TriggerType) :
+        public EventComsumer(String TriggerName, TimeSpan PollingInterval, String EventConsumerType, String TriggerType) :
             base(TriggerName, PollingInterval)
         {
             this.EventConsumerType = EventConsumerType;

@@ -15,7 +15,7 @@ namespace WMIIDS_UnitTest
         {
             eventRaised = false;
 
-            Alert ASEC = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
+            Alert ASEC = new EventComsumer("unittest", new System.TimeSpan(0, 0, 1),
                      EventConsumerType.ActiveScriptEventConsumer, TriggerType.Creation);
             ASEC.EventArrived += RevieceEventSucces;
             ASEC.Start();
@@ -41,7 +41,7 @@ namespace WMIIDS_UnitTest
         {
             eventRaised = false;
 
-            Alert CLE = new EventComsumerAlert("unittest", new System.TimeSpan(0, 0, 1),
+            Alert CLE = new EventComsumer("unittest", new System.TimeSpan(0, 0, 1),
                      EventConsumerType.CommandLineEventConsumer, TriggerType.Creation);
             CLE.EventArrived += RevieceEventSucces;
             CLE.Start();
@@ -69,7 +69,7 @@ namespace WMIIDS_UnitTest
         {
             eventRaised = false;
 
-            Alert SCE = new StartupCommandEventAlert("unittest", new System.TimeSpan(0, 0, 1),
+            Alert SCE = new StartupCommandEvent("unittest", new System.TimeSpan(0, 0, 1),
                       TriggerType.Creation);
             SCE.EventArrived += RevieceEventSucces;
             SCE.Start();
