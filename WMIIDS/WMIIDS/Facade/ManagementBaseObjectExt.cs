@@ -14,5 +14,15 @@ namespace WMIIDS.Facade
 
             return str;
         }
+        
+        public static string GetNameSpace(this ManagementBaseObject mbo)
+        {
+            return mbo.ClassPath.NamespacePath;
+        }
+
+        public static string GetClassName(this ManagementBaseObject mbo)
+        {
+            return mbo.ClassPath.ClassName;
+        }
     }
 }

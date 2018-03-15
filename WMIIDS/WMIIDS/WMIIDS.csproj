@@ -36,6 +36,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>test.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -61,6 +64,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Facade\ManagementBaseObjectExt.cs" />
+    <Compile Include="Model\BaseViewModel.cs" />
+    <Compile Include="Model\LogData.cs" />
+    <Compile Include="UtilityClasses\ObservarableObject.cs" />
+    <Compile Include="ViewModel\WMIIDSViewModel.cs" />
     <Compile Include="View\NotifyIcon\NotifyIcon.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -111,7 +118,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="test.ico" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resource\Image\test.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

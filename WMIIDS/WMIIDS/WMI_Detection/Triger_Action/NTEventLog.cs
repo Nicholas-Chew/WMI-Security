@@ -4,9 +4,13 @@ using System.Globalization;
 using System.Management;
 
 using WMIIDS.Facade;
+using WMIIDS.Model;
 
 namespace WMIIDS.WMI_Detection.Triger_Action
 {
+    /// <summary>
+    /// Log trigger into windows event log, will be log into Application with Source WMI Security Activity
+    /// </summary>
     public class NTEventLog : Action
     {
         // The actual limit is higher than this, but different Microsoft operating systems actually have
@@ -19,7 +23,7 @@ namespace WMIIDS.WMI_Detection.Triger_Action
             {
                 if(!EventLog.SourceExists("WMI Security Activity"))
                     EventLog.CreateEventSource("WMI Security Activity", "Application");
-                EventLog.WriteEntry("WMI Security Activity", EnsureLogMessageLimit("WMI Object Dump \n\n" + mbo.AllPropertyToString()), EventLogEntryType.Warning);
+                EventLog.WriteEntry("WMI Security Activity", EnsureLogMessageLimit((new LogData(mbo)).ToString()), EventLogEntryType.Warning);
             }
             catch(Exception)
             {

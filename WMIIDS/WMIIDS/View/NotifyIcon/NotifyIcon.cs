@@ -9,6 +9,14 @@ namespace WMIIDS
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private bool isExit;
 
+        public void NotifyBallonTip(string notifyTitle, string notifyText, ToolTipIcon topIcon, int timeout)
+        {
+            notifyIcon.BalloonTipText = notifyText;
+            notifyIcon.BalloonTipIcon = topIcon;
+            notifyIcon.BalloonTipTitle = notifyTitle;
+            notifyIcon.ShowBalloonTip(timeout);
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -23,6 +31,7 @@ namespace WMIIDS
             notifyIcon = new System.Windows.Forms.NotifyIcon();
             notifyIcon.DoubleClick += (s, args) => ShowMainWindow();
             notifyIcon.Icon = new System.Drawing.Icon("Resource/Image/test.ico");
+            notifyIcon.Text = "WMIIDS";
             notifyIcon.Visible = true;
 
             CreateContextMenu();
