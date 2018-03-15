@@ -37,7 +37,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>test.ico</ApplicationIcon>
+    <ApplicationIcon>Resource\Image\test.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -117,9 +117,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="test.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\Image\test.ico">
