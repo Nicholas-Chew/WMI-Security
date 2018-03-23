@@ -64,7 +64,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Facade\ManagementBaseObjectExt.cs" />
-    <Compile Include="Model\BaseViewModel.cs" />
+    <Compile Include="UtilityClasses\BaseViewModel.cs" />
     <Compile Include="Model\LogData.cs" />
     <Compile Include="UtilityClasses\ObservarableObject.cs" />
     <Compile Include="ViewModel\WMIIDSViewModel.cs" />

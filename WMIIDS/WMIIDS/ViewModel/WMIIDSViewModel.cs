@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Management;
 using System.Windows;
 using WMIIDS.Model;
+using WMIIDS.UtilityClasses;
 
 namespace WMIIDS.ViewModel
 {
