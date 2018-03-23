@@ -12,7 +12,7 @@ namespace WMIIDS.Model
         private DateTime dateTime;
         private String nameSpace;
         private String className;
-        private String infomation;
+        private String information;
 
         #endregion
         
@@ -56,16 +56,16 @@ namespace WMIIDS.Model
             }
         }
 
-        public string Infomation
+        public string Information
         {
             get
             {
-                return this.infomation;
+                return this.information;
             }
             set
             {
-                this.infomation = value;
-                base.RaisePropertyChangedEvent("Infomation");
+                this.information = value;
+                base.RaisePropertyChangedEvent("Information");
             }
         }
 
@@ -76,13 +76,13 @@ namespace WMIIDS.Model
             this.DateTime = DateTime.Now;
             this.NameSpace = mbo.GetNameSpace();
             this.ClassName = mbo.GetClassName();
-            this.Infomation = mbo.AllPropertyToString();
+            this.Information = mbo.AllPropertyToString();
         }
 
         public override string ToString()
         {
             return String.Format("Date: {0} \nNameSpace: {1} \nClassName: {2} \nInfomation:\n{3}", 
-                this.DateTime, this.NameSpace, this.ClassName, this.Infomation);
+                this.DateTime, this.NameSpace, this.ClassName, this.Information);
         }
     }
 }
